@@ -1,9 +1,10 @@
 import React from "react"
 
-const Character = ({ characters }) => {
+const Character = props => {
+    console.log(props)
     return (
         <div className='character-info'>
-            <h3 className='character-name'>Name: {this.character.name}</h3>
+            <h3 className='character-name'>Name: {props.characterObj.name}</h3>
         </div>
     )
 }
