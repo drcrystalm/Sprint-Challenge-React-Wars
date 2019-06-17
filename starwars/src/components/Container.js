@@ -1,12 +1,13 @@
 import React from "react"
 import Character from "./Character"
 
-const Card = props => {
-    //  console.log(props)
+const Container = ({ characters }) => {
+    //named characters because that's what I called my props on App.js, must be in a {} so that it can access correctly. Look object destructuring.
+    console.log(characters)
     return (
         <div>
             <h1>StarWars Characters:</h1>
-            {props.characters.map(character => {
+            {characters.map(character => {
                 return (
                     <Character
                         key={character.created}
@@ -18,4 +19,4 @@ const Card = props => {
     )
 }
 
-export default Card
+export default Container
