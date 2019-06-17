@@ -24,7 +24,8 @@ class App extends Component {
                 return res.json()
             })
             .then(data => {
-                //console.log(data, "data") So data is something we name, the .results comes from looking at the API data, and seeing what it is listed as. We can name things on the LEFT side of out dots.
+                console.log(data, "data")
+                // So data is something we name, the .results comes from looking at the API data, and seeing what it is listed as. We can name things on the LEFT side of out dots.
                 this.setState({ starwarsChars: data.results })
             })
             .catch(err => {
